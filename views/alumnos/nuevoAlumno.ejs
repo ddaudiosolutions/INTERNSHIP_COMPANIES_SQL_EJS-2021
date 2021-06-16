@@ -1,0 +1,66 @@
+
+<% layout('layouts/boilerplate')%>
+    
+    
+        <div class="text-center bg-info">
+            <h2>NUEVO ALUMNO</h2>
+        </div>
+    
+       <div class="container">
+        <form class="container" action='/alumnos/nuevoalumno' method='POST'>
+            <div class="row mb-3"> 
+                <div class=" col-md-4">
+                    <label for ="curso" > Curso </label>
+                    <input type="text" id="curso" class="form-control" name="cursoAl" >
+                </div>
+
+                <div class="col-md-4">
+                    <label for ="nombreAl" > Nombre </label>
+                    <input type="text" id="nombreAl" class="form-control" name="nombreAl" >
+                </div>
+                <div class=" col-md-4">
+                    <label for ="localidadAl" > Localidad </label>
+                    <input type="text" id="localidadAl" class="form-control" name="localidadAl" >
+                </div>
+            </div>
+            <div class="row mb-3"> 
+                <div class="form-group col-md-4">
+                    <label for ="emailAl" > Email </label>
+                    <input type="text" id="emailAl" class="form-control" name="emailAl" >
+                </div>
+                <div class="form-group col-md-4">
+                    <label for ="telefonoAl"> Telefono </label> 
+                    <input type="text" id="telefonAl" class="form-control" name="movilAl" >
+                </div>
+                <div class="form-group col-md-4">
+                    <label for ="practicas"> Practicas </label>
+                    <input type="text" id="practicas" class="form-control" name="practicas" >
+                </div>
+            </div>
+            
+            <div class="row mb-3">
+                
+                <div class="form-group col-md-4">
+                    <label for ="Contacto_Emp" > Contacto_Emp </label>
+                    <input type="text" id="contacto_emp" class="form-control" name="contactoEmp">
+                </div>
+                
+                <div class="form-group col-md-4">
+                    <label for ="empresa_alumno"> Empresa </label>
+                    <input type="text" id="empresa_alumno" class="form-control" name="empresaAl" >
+                </div>
+            </div>
+            <div class="row mb-3 form-group">
+                <label for="observaciones">OBSERVACIONES</label>
+                <textarea name="OBSERVACIONES" id="observaciones" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="btn col-md-12" >
+                <button class="btn btn-outline-success "> Agregar Alumno</button>
+            </div>
+        </form>  
+        </div>
+  
+
+
+    

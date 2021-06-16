@@ -1,0 +1,39 @@
+<% layout('layouts/boilerplate')%>
+<h2 class="text-center bg-warning">LISTADO DE EMPRESAS DE PRÁCTICAS</h2>
+     <table class="table table-hover">
+        <thead class="thead-dark">
+            <tr>                
+                
+                <th scope="col">Empresa</th>
+                <th scope="col">Contacto</th>
+                <th scope="col">E-MAIL</th>
+                <th scope="col">TELEFONO</th>
+                <th scop="col">PRACTICAS</th>
+                <th scope="col">Mostrar</th> 
+                <th scope="col">Editar</th>    
+            </tr>
+        </thead>
+        <tbody id="listado_Empresas">
+            <% for (let empresa of empresas)  {%>
+                <tr> 
+                 <td><%= empresa.EMPRESA%></td>
+                 <td> <%= empresa.CONTACTO%></td>
+                 <td><%= empresa.EMAIL%></td>
+                 <td> <%= empresa.TELEFONO %></td>
+                 <td> <%= empresa.PRACTICAS %></td>
+                 <td> <a class="btn btn-outline-dark" type="submint" href="/empresas/mostrarempresa/<%=empresa.id %>"> Mostrar </a> </td>
+                 <td> <a class="btn btn-outline-danger" type="submint" href="/empresas/editarempresa/<%=empresa.id %>"> Editar </a> </td>
+                </tr>
+                   
+               <% } %>
+            
+        </tbody>
+       
+    </table>
+
+   
+
+    <button type="button" class="btn btn-outline-success" onclick="window.location='/'">Volver al Menu</button>
+
+    
+    

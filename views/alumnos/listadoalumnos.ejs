@@ -1,0 +1,42 @@
+<% layout('layouts/boilerplate')%>
+    <h2 class="text-center bg-warning">LISTADO DE ALUMNOS EN PRÁCTICAS</h2>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" id="sortDate">Curso</th>
+                <th scope="col" id="sortName">Nombre</th>              
+                <th scope="col" >Localidad</th> 
+                <th scope="col">Email_Alumno</th>
+                <th scope="col">Contacto Alumno</th>       
+                <th scope="col">Practicas</th>
+                <th scope="col">Empresa</th>
+                <th scope="col">Contacto Emp.</th>
+                <th scope="col">Mostrar</th> 
+                <th scope="col">Editar</th   
+            </tr>
+        </thead>
+        <tbody class="tableAlumnos" id="listado_Alumnos">
+            <% for (let alumno of alumnos)  {%>
+               <tr> 
+                <td><%= alumno.cursoAl%></td>
+                <td> <%= alumno.nombreAl%></td>
+                <td><%= alumno.localidadAl%></td>
+                <td> <%= alumno.emailAl %></td>
+                <td> <%= alumno.movilAl %></td>
+                <td><%= alumno.practicas%></td>
+                <td><%= alumno.empresaAl%></td>
+                <td> <%= alumno.contactoEmp%></td> 
+                <td> <a class="btn btn-outline-dark" type="submint" href="/alumnos/mostraralumno/<%=alumno.id %>"> Mostrar </a> </td>
+                <td> <a class="btn btn-outline-danger" type="submint" href="/alumnos/editaralumno/<%=alumno.id %>"> Editar </a> </td>
+               </tr>
+                 
+              <% } %>
+              
+        </tbody>
+       
+    </table>
+
+   <!---  <button type="button" id="sortar">Sort</button> -->
+    <button type="button" class="btn btn-outline-success" onclick="window.location='/'">Volver al Menu</button>
+
+    <!-- <script src="/js/mostrarAlumnos.js" type="module"></script> -->

@@ -1,0 +1,50 @@
+<% layout('layouts/boilerplate')%>
+    <div class="text-center bg-info">
+        <h2>EDITAR   EMPRESA</h2>
+    </div>
+    <div class="container">
+        <% for (let empresa of editardetallesEmpresa)  {%> 
+            
+        <div class="row" >
+        <form class="col-md-10 offset-md-1" action="/empresas/editarempresa/<%=empresa.id%>" method="POST">
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for ="nombreEmp" > Empresa </label>
+                    <input type="text" class="form-control" id="nombreEmp" name="EMPRESA" value='<%=empresa.EMPRESA%> '>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for ="nombreResp" > Contacto </label>
+                    <input type="text" class="form-control"  id="nombreResp" name="CONTACTO" value='<%=empresa.CONTACTO%>' >
+                </div>                        
+                <div class="form-group col-md-4">
+                    <label for ="email" > Email </label>
+                    <input type="text" class="form-control" id="email" placeholder="Email Responsable" value='<%=empresa.EMAIL%>' name="EMAIL">
+                </div>
+            </div>
+           <div class="row">
+                <div class="form-group col-md-4">
+                    <label for ="telefono" > Telefono </label>
+                    <input type="text" class="form-control" id="telefono" placeholder="Telefono Responsable" value='<%=empresa.TELEFONO%>' name="TELEFONO">
+                </div>
+            
+                <div class="form-group col-md-4">
+                    <label for ="practicas"> Practicas </label>
+                    <input type="text" id="practicas" class="form-control" name="PRACTICAS" value='<%=empresa.PRACTICAS%>' >
+                </div>
+            
+           </div>
+           <div class="row mb-3">
+            <label for="observaciones">OBSERVACIONES</label>
+            <textarea name="OBSERVACIONES" id="observaciones" cols="10" rows="5"><%=empresa.OBSERVACIONES%></textarea>
+          </div>
+
+         
+
+            <div  class="btn col-md-12">
+                <button  class="btn btn-outline-success" > EDITAR EMPRESA</button>
+            </div>
+            <% } %>
+        </form>
+
+        </div>
+    </div>
